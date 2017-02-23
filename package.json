@@ -1,11 +1,11 @@
 {
-  "name": "cms",
+  "name": "nkmv",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "author": "scc",
   "license": "ISC",
@@ -28,11 +28,34 @@
     "validator": "^6.0.0"
   },
   "devDependencies": {
+    "ava": "^0.18.1",
     "babel-eslint": "^6.1.2",
     "eslint": "^3.5.0",
     "eslint-config-standard": "^6.0.0",
     "eslint-config-vue": "^1.1.0",
     "eslint-plugin-html": "^1.5.2",
-    "eslint-plugin-standard": "^2.0.0"
+    "eslint-plugin-standard": "^2.0.0",
+    "supertest": "^3.0.0"
+  },
+  "ava": {
+    "files": [
+      "test/index.js"
+    ],
+    "source": [
+      "**/*.{js,jsx}",
+      "!static/**/*"
+    ],
+    "match": [
+      "*oo",
+      "!foo"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true,
+    "powerAssert": false,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }

@@ -1,7 +1,7 @@
 import Router from 'koa-router'
 import Crypto from 'crypto'
 import jwt from 'jsonwebtoken'
-const userOprt = require('../../../lib/user.js')
+const userOprt = require('../../lib/user.js')
 let user = new Router()
 
 user.post('/adduser', async (ctx, next) => {

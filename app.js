@@ -19,3 +19,5 @@ app.use(convert(gzip()))
 app.use(convert(routerApi.routes()))
 
 app.listen(config.port)
+
+module.exports = app
